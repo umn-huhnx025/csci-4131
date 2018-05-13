@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8">
+
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNIwMlE0vuKZuJTd5zScE1OoZZfF9O3i0&callback=initMap&libraries=places"
+    async defer></script>
+  <script src="map.js" async defer></script>
+
+
+  <title>Jon's Favs</title>
+</head>
+
+<body>
+  <nav>
+    <form action="#">
+      <input type="submit" value="My Places">
+    </form>
+    <form action="form.html">
+      <input type="submit" value="Input Form">
+    </form>
+  </nav>
+
+  <h1>My Favorite Places</h1>
+
+  <div class="container">
+    <div class="col-1 top">
+      <table id="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Hours of Operation</th>
+            <th>Additional Information</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Coffman Memorial Union</td>
+            <td>300 Washington Ave SE
+              <br>Minneapolis, MN 55455</td>
+            <td>7:00AM-11:00PM</td>
+            <td>
+              <a href="http://sua.umn.edu/locations/coffman/">Info</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Keller Hall</td>
+            <td>200 Union St SE
+              <br>Minneapolis MN 55455</td>
+            <td>6:00AM-10:00PM</td>
+            <td>Home of the CS&amp;E and ECE departments.</td>
+          </tr>
+
+          <tr>
+            <td>Raising Cane's</td>
+            <td>825 Washington Ave SE
+              <br>Minneapolis, MN 55414</td>
+            <td>10:00AM-11:00PM</td>
+            <td>
+              <a href="https://www.raisingcanes.com/">Info</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td>TCF Bank Stadium</td>
+            <td>420 SE 23rd Ave
+              <br>Minneapolis, MN 55455</td>
+            <td>8:00AM-10:00PM</td>
+            <td>The home stadium for the Golden Gopher football team.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="col-2">
+      <a class="twitter-timeline" href="https://twitter.com/hashtag/UMN" data-widget-id="957497186652250112" data-height="450">#UMN Tweets</a>
+    </div>
+
+    <div class="col-1">
+      <form action="javascript:void(0);" onsubmit="searchNearby()" id="map-search-form">
+        <label for="radius">Radius</label>
+        <input type="text" id="radius" pattern="\d+\.?\d*">
+
+        <label for="nearby">Nearby</label>
+        <select name="nearby" id="nearby">
+          <option value="restaurant">Restaurant</option>
+          <option value="hospital">Hospital</option>
+          <option value="museum">Museum</option>
+          <option value="supermarket">Supermarket</option>
+        </select>
+
+        <input type="submit" value="Search Near Me">
+      </form>
+    </div>
+    <div class="col-2"></div>
+
+    <div class="col-1">
+      <form action="javascript:void(0);" onsubmit="getDirections()" id="map-directions-form">
+        <label for="destination">Destination</label>
+        <input type="text" name="destination" id="destination">
+
+        <label for="mode">Mode of Travel</label>
+        <select name="mode" id="mode">
+          <option value="DRIVING" selected="selected">Driving</option>
+          <option value="WALKING">Walking</option>
+          <option value="BICYCLING">Bicycling</option>
+          <option value="TRANSIT">Transit</option>
+        </select>
+
+        <input type="submit" value="Get Directions">
+      </form>
+    </div>
+    <div class="col-2"></div>
+
+
+    <div id="map" class="col-1 top"></div>
+    <div id="right-panel" class="col-2"></div>
+
+    <footer>
+      <p>Tested on Chrome 64.</p>
+    </footer>
+  </div>
+
+</body>
+
+</html>

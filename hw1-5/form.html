@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8">
+  <title>Jon's Favs</title>
+
+
+</head>
+
+<body>
+  <nav>
+    <form action="places.html">
+      <input type="submit" value="My Places">
+    </form>
+
+    <form action="#">
+      <input type="submit" value="Input Form">
+    </form>
+  </nav>
+
+  <h1>Places Form</h1>
+
+  <form id="places-form" method="post" action="/">
+
+    <div class="places-form-row">
+      <label for="placename">Place Name</label>
+      <input type="text" name="placename" id="placename" pattern="[a-zA-Z0-9 ]+" title="This field is required and may only contain alphanumeric characters and spaces."
+        required>
+    </div>
+
+    <div class="places-form-row">
+      <label for="addressline1">Address Line1</label>
+      <input type="text" name="addressline1" id="addressline1" pattern="[a-zA-Z0-9 ]+" title="This field is required and may only contain alphanumeric characters and spaces."
+        required>
+    </div>
+
+    <div class="places-form-row">
+      <label for="addressline2">Address Line2</label>
+      <input type="text" name="addressline2" id="addressline2" pattern="[a-zA-Z0-9 ]+" title="This field is required and may only contain alphanumeric characters and spaces."
+        required>
+    </div>
+
+    <div class="places-form-row">
+      <label for="opentime">Opening Time</label>
+      <input type="time" name="opentime" id="opentime" required>
+    </div>
+
+    <div class="places-form-row">
+      <label for="closetime">Closing time</label>
+      <input type="time" name="closetime" id="closetime" required>
+    </div>
+
+    <div class="places-form-row">
+      <label for="additionalinfotext">Additional Info Text</label>
+      <input type="text" name="additionalinfotext" id="additionalinfotext">
+    </div>
+
+    <div class="places-form-row">
+      <label for="additionalinfo">Additional Info URL</label>
+      <input type="url" name="additionalinfo" id="additionalinfo">
+    </div>
+
+    <input type="submit" value="Submit" id="places-form-submit">
+
+  </form>
+
+  <footer>
+    <p>Tested on Chrome 64.</p>
+  </footer>
+</body>
+
+</html>

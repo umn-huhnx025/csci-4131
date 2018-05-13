@@ -1,0 +1,15 @@
+h1, p, ul {
+    text-align: center !important;
+}
+
+#user {
+    text-align: right !important;
+}
+
+#myFavTable.thead {
+	text-align: center;
+}
+
+#error {
+    color: red;
+}
